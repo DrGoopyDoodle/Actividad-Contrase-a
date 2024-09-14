@@ -1,7 +1,9 @@
 import random
-e =  "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
-l = int(input("Longitud de la contreseña"))
-p = ""
-for i in range(l):
-    p += random.choice (e)
-print (p)
+def gen_pass(pass_length):
+    elements = "+-/*!&$#?=@<>"
+    password = ""
+
+    for i in range(pass_length):
+        password += random.choice(elements)
+
+    return password
